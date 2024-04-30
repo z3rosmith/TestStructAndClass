@@ -66,7 +66,7 @@ class ClassOfClasses {
 func arrayAppendTask1() {
     var array = [StructOfStructs]()
     let object = StructOfStructs()
-    for _ in 0..<25000000 {
+    for _ in 0..<30000000 {
         array.append(object)
     }
 }
@@ -74,7 +74,7 @@ func arrayAppendTask1() {
 func arrayAppendTask2() {
     var array = [StructOfClasses]()
     let object = StructOfClasses()
-    for _ in 0..<25000000 {
+    for _ in 0..<30000000 {
         array.append(object)
     }
 }
@@ -82,7 +82,7 @@ func arrayAppendTask2() {
 func arrayAppendTask3() {
     var array = [ClassOfStructs]()
     let object = ClassOfStructs()
-    for _ in 0..<25000000 {
+    for _ in 0..<30000000 {
         array.append(object)
     }
 }
@@ -90,7 +90,7 @@ func arrayAppendTask3() {
 func arrayAppendTask4() {
     var array = [ClassOfClasses]()
     let object = ClassOfClasses()
-    for _ in 0..<25000000 {
+    for _ in 0..<30000000 {
         array.append(object)
     }
 }
@@ -105,14 +105,14 @@ print("1, StructOfStructs: ", time1)
 let time2 = clock.measure {
     arrayAppendTask2()
 }
-print("2: StructOfClasses", time2)
+print("2, StructOfClasses:", time2)
 
 let time3 = clock.measure {
     arrayAppendTask3()
 }
-print("3: ClassOfStructs", time3)
+print("3, ClassOfStructs:", time3)
 
 let time4 = clock.measure {
     arrayAppendTask4()
 }
-print("4: ClassOfClasses", time4)
+print("4, ClassOfClasses:", time4)
